@@ -1,10 +1,12 @@
+from typing import * 
+
 def solution(): 
     pass
 
-def test(imp: ): 
+def test(solution: ): 
     print("all tests passed")
 
 if __name__ == "__main__": 
-    test(imp) 
+    test(solution) 
 
     
