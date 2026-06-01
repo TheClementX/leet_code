@@ -3,20 +3,6 @@ from typing import *
 def solution(s: str, t: str) -> bool: 
     if len(s) != len(t): return False
 
-    ds, dt = dict(), dict()
-    for i in range(len(s)): 
-        ds[s[i]] = ds.get(s[i], 0) + 1
-        dt[t[i]] = dt.get(t[i], 0) + 1
-
-    vs = sorted(list(ds.values())) 
-    vt = sorted(list(dt.values())) 
-    print(vs, vt)
-
-    return vs == vt
-
-def solution(s: str, t: str) -> bool: 
-    if len(s) != len(t): return False
-
     map = dict()
     taken = set()
     for i in range(len(s)):
