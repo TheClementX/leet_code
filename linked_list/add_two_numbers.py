@@ -8,8 +8,8 @@ class ListNode:
 def array_to_ll(s: List[Any]) -> Optional[ListNode]: 
     if s == []: return None
     result = None
-    for v in s: 
-        result = ListNode(v, result)
+    for i in range(len(s)-1, -1, -1): 
+        result = ListNode(s[i], result)
     return result
 
 def ll_to_array(head: Optional[ListNode]) -> None: 
