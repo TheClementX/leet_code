@@ -30,9 +30,9 @@ def solution(
 
         for nbor in graph[c]: 
             node, val = nbor
-            r_val = get_path(graph, node, e, n_visited)
+            r_val = val * get_path(graph, node, e, n_visited)
             if r_val >= 0.0: 
-                return val * r_val 
+                return r_val 
 
         return -1.0
 
@@ -42,33 +42,6 @@ def solution(
         result.append(get_path(eq_graph, s, e, set()))
 
     return result
-
-# def get_path(graph: dict, start: str, end: str): 
-#     if start not in graph: return -1.0
-# 
-#     nodes, visited = [start], set()
-#     path, found = set(), False
-#     while nodes: 
-#         cur_node, val = nodes.pop()
-# check stop conditions
-#         if cur_node == end: 
-#             path.add((cur_node, val))
-#             found = True
-#             break
-#         if cur_node in visited:
-#             path.remove((cur_node, val))
-#             continue
-#         
-# process 
-#         visited.add(cur_node)
-#         path.add((cur_node, val))
-# 
-# append neighbors
-#         nbors = graph[cur_node]
-#         nodes.extend(nbors)
-#     
-#     if not found: return -1.0
-#     return math.prod([val for _, val in path])
 
 def test(solution: ): 
     print("all tests passed")
