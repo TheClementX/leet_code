@@ -30,6 +30,10 @@ def test(solution):
     nums = [5,-1,5]
     sol = solution(nums)
     print(sol)
+
+    nums = [1,2,3,2]
+    sol = solution(nums)
+    print(sol)
     print("all tests passed")
 
 if __name__ == "__main__": 
